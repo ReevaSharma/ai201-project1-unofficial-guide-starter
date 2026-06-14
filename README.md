@@ -47,7 +47,7 @@
      - Chunk size (characters or tokens) and why that size fits your documents
      - Overlap size and why (or why not) you used overlap
      - Any preprocessing you did before chunking (e.g., stripping HTML, removing headers)
-     - What your final chunk count was across all documents -->
+     - What your final chunk count was across all documents --> 
 
 **Chunk size:** 200-300 tokens (200-300 words)
 
@@ -55,7 +55,7 @@
 
 **Why these choices fit your documents:** The sources are short: official dining entries run 40–60 tokens after stripping boilerplate, Patch paragraphs 50–80, Reddit tips and TikTok summaries 1–3 sentences. A 200–300 token chunk fits one complete location entry or review without bundling unrelated halls together. Overlap is kept to 30 tokens — on 60-token entries, anything larger causes near-total duplication between chunks. CampusReel (source 9) and TripAdvisor (source 7) may yield longer passages and will be split at paragraph boundaries and capped at 300 tokens.
 
-**Final chunk count:** ******----*****
+**Final chunk count:** 34 chunks across 10 sources (6 scraped successfully, 4 via manual fallback text)
 
 ---
 
